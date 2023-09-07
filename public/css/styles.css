@@ -10,6 +10,35 @@ body {
 	line-height: 1px;
 }*/
 
+li{
+    margin-top: 10px;
+}
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+.social-icons .social-icon:hover {
+  background-color: #bd5d38;
+}
+
+
+.card-img-top {
+/*  style="max-height: 200px;min-height: 150px;object-fit: cover;*/
+    max-height: 400px;
+    min-height: 250px;
+    object-fit: cover;
+}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -20,6 +49,16 @@ body {
 }
 
 
+.container-fluid{
+  background-image: linear-gradient(to right, 
+    rgba(254, 254, 254, 1) 50%, 
+    rgba(254, 254, 254, 0.6) 86%, 
+    rgba(254, 254, 254, 0.8) 100%),
+  url('../images/atoms2.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .navbar-brand > .material-icons-outlined{
 
@@ -41,7 +80,7 @@ body {
 .rollin {
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 1.5s;
+  transition: all 0.8s;
 }
 
 .rollin.active {
