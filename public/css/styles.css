@@ -48,8 +48,21 @@ li{
   'opsz' 24
 }
 
+canvas {
+  /*background-size: cover;
+  position: relative;
+  z-index: -100 !important;*/
 
-.container-fluid{
+
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+/*.container-fluid{
+  background: -webkit-canvas(squares);
+
   background-image: linear-gradient(to right, 
     rgba(254, 254, 254, 1) 50%, 
     rgba(254, 254, 254, 0.6) 86%, 
@@ -58,7 +71,8 @@ li{
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-}
+
+}*/
 
 .navbar-brand > .material-icons-outlined{
 
