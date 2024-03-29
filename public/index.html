@@ -385,18 +385,15 @@
                       <div class="badge bg-primary rounded-pill">DFT</div>
                       <div class="badge bg-primary rounded-pill">Cluster Expansion</div>
                       <div class="badge bg-primary rounded-pill">Monte Carlo Simulation</div>
-                      <div class="badge bg-primary rounded-pill">
-                        Material UI
-                      </div>
                     </div>
                     <p class="card-text">
-                      Monte Carlo calculations to obtain the ordering temperature in High Entropy Systems.
+                      Monte Carlo calculation of ordering temperature in High Entropy Systems.
                     </p>
                   </div>
                   <div class="card-footer bg-transparent mb-3">
                     <a
                       class="btn btn-outline-primary btn-sm text-uppercase"
-                      href="https://www.nature.com/articles/s41524-023-01021-8"
+                      href="https://arxiv.org/abs/2403.18298"
                       target="_blank"
                     >
                       <span class="material-icons-outlined me-1">article</span>
@@ -405,7 +402,7 @@
 
                     <a
                       class="btn btn-outline-primary btn-sm text-uppercase"
-                      href="https://codeocean.com/capsule/6279423/tree/v1"
+                      href="https://github.com/vzguille/scheduler_src"
                       target="_blank"
                     >
                       <span class="material-icons-outlined me-1">code</span>
@@ -422,13 +419,12 @@
                     alt="Project 2"
                   >
                   <div class="card-body p-4">
-                    <h5 class="card-title mb-3">Portfolio Website</h5>
+                    <h5 class="card-title mb-3">Machine-learning for the design of rare-earth compounds</h5>
                     <div class="mb-2">
-                      <div class="badge bg-primary rounded-pill">Django</div>
-                      <div class="badge bg-primary rounded-pill">React</div>
-                      <div class="badge bg-primary rounded-pill">
-                        Material UI
-                      </div>
+                      <div class="badge bg-primary rounded-pill">ML</div>
+                      <div class="badge bg-primary rounded-pill">SISSO</div>
+                      <div class="badge bg-primary rounded-pill">DFT</div>
+                      
                     </div>
                     <p class="card-text">
                       A portfolio website built using Django 3, Next.js 12 and
@@ -609,6 +605,42 @@
                 </div>
             </div>
         </section>
+
+
+
+        <section id="Contact me" class="text-center py-5">
+          <div class="container py-5 rollin">
+              <div class="row justify-content-center">
+                <h2 class="fw-bold">Contact me</h2>
+              </div>
+          </div>
+          <div class="container mb-5 rollin">
+            
+            <div class="container contact-container text-start">
+              <h3>Send me a message using the form below.</h3>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+
+          </div>
+      </section>
         <!-- End Awards -->
 
 
@@ -664,5 +696,35 @@
 
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
+
+    <!--firebase-->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"></script> -->
+
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDG6Fq3KG9pDP3rmdj6ExG4DVZWVWi5PIk",
+        authDomain: "portfolio-guillevz.firebaseapp.com",
+        databaseURL: "https://portfolio-guillevz-default-rtdb.firebaseio.com",
+        projectId: "portfolio-guillevz",
+        storageBucket: "portfolio-guillevz.appspot.com",
+        messagingSenderId: "724567863955",
+        appId: "1:724567863955:web:0fbcb16baee187506e9366",
+        measurementId: "G-016N6EYS6Z"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
  </body>
 </html>

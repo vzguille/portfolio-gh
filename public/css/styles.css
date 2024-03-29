@@ -104,6 +104,12 @@ canvas {
 
 
 
+.contact-container {
+  margin-top: 50px;
+  padding: 30px;
+  box-shadow: 0 5px 6px rgba(0.5, 0.5, 0.5, 0.7);
+  background-color: rgba(181, 75, 63, 0.343);
+
 
 /*
 .rollin { animation: rollIn 3s; }
