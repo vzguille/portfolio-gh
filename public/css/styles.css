@@ -110,6 +110,18 @@ canvas {
   box-shadow: 0 5px 6px rgba(0.5, 0.5, 0.5, 0.7);
   background-color: rgba(181, 75, 63, 0.343);
 
+}
+
+.alert{
+  text-align: center;
+  padding:10px;
+  background:#79c879;
+  color:#fff;
+  margin-bottom:10px;
+  display:none;
+}
+
+
 
 /*
 .rollin { animation: rollIn 3s; }
@@ -119,3 +131,5 @@ canvas {
    100% { opacity: 1; transform: translateX(0px) ; } 
 } 
 */
+
+

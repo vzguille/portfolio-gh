@@ -92,6 +92,9 @@
                 <li class="nav-item">
                   <a class="nav-link me-lg-3" href="#awards">Awards</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#contactme">Contact</a>
+                </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link me-lg-3" href="#contact">Contact</a>
                 </li> -->
@@ -371,12 +374,12 @@
           </div>
            <div class="container mb-5 rollin">
             <div class="row">
-              <div class="col-lg-4 mx-auto mb-5">
+              <div class="col-lg-8 mx-auto mb-5">
                 <div class="card h-100 shadow-lg border-0 bg-light">
                   <img
                     class="card-img-top"
-                    src="images/profile.jpg"
-                    alt="Project 1"
+                    src=""
+                    alt="Project 4"
                   >
                   <div class="card-body p-4">
                     <h5 class="card-title mb-3">Chemical Ordering in High Entropy Materials</h5>
@@ -415,8 +418,8 @@
                 <div class="card h-100 shadow-lg border-0 bg-light">
                   <img
                     class="card-img-top"
-                    src="images/project2.png"
-                    alt="Project 2"
+                    src=""
+                    alt="Project 5"
                   >
                   <div class="card-body p-4">
                     <h5 class="card-title mb-3">Machine-learning for the design of rare-earth compounds</h5>
@@ -604,11 +607,12 @@
                   </div>
                 </div>
             </div>
+
         </section>
 
 
 
-        <section id="Contact me" class="text-center py-5">
+        <section id="contactme" class="text-center py-5">
           <div class="container py-5 rollin">
               <div class="row justify-content-center">
                 <h2 class="fw-bold">Contact me</h2>
@@ -618,21 +622,23 @@
             
             <div class="container contact-container text-start">
               <h3>Send me a message using the form below.</h3>
-              <form>
+              
+              <div class="alert">Thank you, your message has been sent!</div>
+              <form id="contactForm">
                 <div class="mb-3">
-                  <label for="name" class="form-label">Your Name</label>
+                  <label class="form-label">Your Name</label>
                   <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Your Email</label>
+                  <label  class="form-label">Your Email</label>
                   <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="mb-3">
-                  <label for="subject" class="form-label">Subject</label>
+                  <label class="form-label">Subject</label>
                   <input type="text" class="form-control" id="subject" name="subject" required>
                 </div>
                 <div class="mb-3">
-                  <label for="message" class="form-label">Message</label>
+                  <label class="form-label">Message</label>
                   <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
@@ -640,6 +646,27 @@
             </div>
 
           </div>
+          <h4 class="text-center fw-bold mb-2">... or send me a message in my socials</h4>
+          <div class="d-grip gap-3 d-sm-flex justify-content-center social-icons text-center rollin">
+                                <div class="mb-3">
+                                <h5>Linkedin</h5>
+                                <a title="Linkedin" class="social-icon" href="https://www.linkedin.com/in/vzguille/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+
+                                <div class="mb-3">
+                                  <h5>Github</h5>
+                                <a title="Github" class="social-icon" href="https://github.com/vzguille" target="_blank"><i class="fab fa-github" ></i></a>
+                                </div>
+                                <div class="mb-3">
+                                  <h5>Google Scholar</h5>
+                                <a title="Google Scholar" class="social-icon" href="https://scholar.google.com/citations?user=0jE3Tv4AAAAJ&hl=en" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                                </div>
+                                <div class="mb-3">
+                                  <h5>e-mail</h5>
+                                <a title="guillermo.vazquez@tamu.edu" class="social-icon" href="mailto:guillermo.vazquez@tamu.edu"><i class="fa fa-envelope"></i></a>
+                                </div>
+
+                            </div>
       </section>
         <!-- End Awards -->
 
@@ -697,34 +724,6 @@
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
 
-    <!--firebase-->
-    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"></script> -->
-
-
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-    
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyDG6Fq3KG9pDP3rmdj6ExG4DVZWVWi5PIk",
-        authDomain: "portfolio-guillevz.firebaseapp.com",
-        databaseURL: "https://portfolio-guillevz-default-rtdb.firebaseio.com",
-        projectId: "portfolio-guillevz",
-        storageBucket: "portfolio-guillevz.appspot.com",
-        messagingSenderId: "724567863955",
-        appId: "1:724567863955:web:0fbcb16baee187506e9366",
-        measurementId: "G-016N6EYS6Z"
-      };
-    
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
+    <script type="module" src="js/db.js"></script>
  </body>
 </html>
