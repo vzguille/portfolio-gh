@@ -133,3 +133,11 @@ canvas {
 */
 
 
+
+.favicon-icon {
+  display: inline-block;
+  width: 16px; /* Adjust width and height as needed */
+  height: 16px;
+  background: url('../favicon/favicon-32x32.png') no-repeat;
+  background-size: contain; /* Adjust according to the size of your favicon */
+}
