@@ -1,11 +1,7 @@
 var canvas;
-
-function windowResized() {
-  //console.log('resized');
-  resizeCanvas(windowWidth, windowHeight);
-}
 let a = 200;
 let atoms = [];
+
 let colors = [
   [160, 255, 15], 
   [120, 202, 255], 
@@ -15,11 +11,11 @@ let colors = [
   [50, 50, 255] 
 ];
 let colors_set = [];
-
+var sphereSize;
 
 
 function setup() {
-  sphereSize = min(width, height) / 10*displayDensity();
+  sphereSize = min(windowWidth, windowHeight) / 50*displayDensity();
   canvas = createCanvas(windowWidth, windowHeight, WEBGL);
   canvas.position(0, 0, 'fixed');
   for (let x = -2; x < 2; x++) {
@@ -33,7 +29,7 @@ function setup() {
       atoms.push({pos: createVector(x, y, z), color: random(colors)});
       // color = random(colors);
       atoms.push({pos: createVector(x+0.5, y+0.5, z+0.5), color: random(colors)});
-
+      
     }
   }
 };
@@ -48,6 +44,7 @@ var pos = 0;
 
 
 function draw() {
+  pos = lerp(pos, targetPos, 0.1);
   background(color(250,250,250));
   pointLight(120, 120, 120, 0, 0, 100);
   
@@ -89,105 +86,23 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  sphereSize = min(width, height) / displayDensity();
+  sphereSize = min(windowWidth, windowHeight) / 50*displayDensity();
 }
-
-// function mouseWheel(event) {
-//   print(event.delta);
-//   //move the square according to the vertical scroll amount
-//   if(event.delta>0){pos += sqrt(abs(event.delta));}
-//   else{pos -= sqrt(abs(event.delta));}
-// }
-
-// function touchMoved() {
-//   pos +=window.scrollY/10
-// }
-
-
-
-
-let lastScrollY = 0;
-let velocity = 0;
-
+let targetPos = 0; // Target position
 function mouseWheel(event) {
-  // Adjust pos based on the vertical scroll amount
-  if (event.deltaY > 0) {
-    pos += sqrt(abs(event.deltaY));
-  } else {
-    pos -= sqrt(abs(event.deltaY));
-  }
+  // Update targetPos based on mouse wheel scroll
+  let scrollAmount = event.delta;
+  targetPos += sqrt(abs(scrollAmount));
 }
 
 function touchMoved() {
-  // Calculate the current velocity of the scroll
-  let deltaY = window.scrollY - lastScrollY;
-  velocity = deltaY;
+  // Update targetPos based on touch scroll
+  let scrollAmount = mouseY - pmouseY;
+  targetPos += sqrt(abs(scrollAmount));
+}
 
-  // Adjust pos based on the velocity
-  pos += velocity;
-
-  lastScrollY = window.scrollY;
-
-  
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function touchStarted() {
-//   startY = mouseY;
-// }
-
-// function touchMoved() {
-//   let deltaY =( mouseY - startY);
-//   if (deltaY > 0) {
-//     pos += sqrt(abs(deltaY));
-//   } else {
-//     pos -= sqrt(abs(deltaY));
-//   }
-//   startY = mouseY;
-  
-// }
-
-
-// let vel = 0;
-// let lastTouchY = 0;
-// let lastTouchTime = 0;
-
-// function touchStarted() {
-//   lastTouchY = mouseY;
-//   lastTouchTime = millis();
-// }
-
-// function touchMoved() {
-//   let now = millis();
-//   let deltaTime = now - lastTouchTime;
-//   let deltaY = mouseY - lastTouchY;
-
-//   vel = deltaY / deltaTime;
-
-//   pos = window.scrollY + vel;
-//   lastTouchY = mouseY;
-//   lastTouchTime = now;
-
-  
-// }

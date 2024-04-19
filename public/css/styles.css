@@ -141,3 +141,15 @@ canvas {
   background: url('../favicon/favicon-32x32.png') no-repeat;
   background-size: contain; /* Adjust according to the size of your favicon */
 }
+
+
+
+
+
+.modal {
+  z-index: 1050; /* Ensure this is higher than the backdrop */
+}
+
+.modal-backdrop {
+  z-index: 1000; /* Ensure this is lower than the modal */
+}

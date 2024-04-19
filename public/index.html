@@ -27,18 +27,8 @@
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
     >
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    >
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+    
 
 
     <!-- Font Awesome icons (free version)-->
@@ -52,9 +42,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
 
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
 
-    <script src="js/sketch.js"></script>
+
+
+    
 
     
   <title> Guillermo Vazquez </title>
@@ -253,8 +254,11 @@
               </h3>
             </div>
           </div>
+
+
           <div class="container mb-5 rollin">
             <div class="row">
+              <!-- Project 1 -->
               <div class="col-lg-4 mx-auto mb-5">
                 <div class="card h-100 shadow-lg border-0 bg-light">
                   <img
@@ -300,6 +304,7 @@
                   </div>
                 </div>
               </div>
+              <!-- Project 2 -->
               <div class="col-lg-4 mx-auto mb-5">
                 <div class="card h-100 shadow-lg border-0 bg-light">
                   <img
@@ -348,6 +353,7 @@
                   </div>
                 </div>
               </div>
+              <!-- Project 3 -->
               <div class="col-lg-4 mx-auto mb-5">
                 <div class="card h-100 shadow-lg border-0 bg-light">
                   <img
@@ -390,8 +396,10 @@
               </div>
             </div>
           </div>
+          <!-- New Project Row -->
            <div class="container mb-5 rollin">
             <div class="row">
+              <!-- Project 4 -->
               <div class="col-lg-8 mx-auto mb-5">
                 <div class="card h-100 shadow-lg border-0 bg-light">
                   <img
@@ -420,18 +428,25 @@
                       <span class="material-icons-outlined me-1">article</span>
                       Article
                     </a>
-
+                    
                     <a
                       class="btn btn-outline-primary btn-sm text-uppercase"
                       href="https://github.com/vzguille/scheduler_src"
                       target="_blank"
                     >
+                    
                       <span class="material-icons-outlined me-1">code</span>
                       Source Code
                     </a>
+                    <!-- Button trigger modal -->
+                    <a class="btn btn-outline-primary btn-sm text-uppercase" 
+                    data-bs-toggle="modal" data-bs-target="#modalproject4">
+                        See more...
+                      </a>
                   </div>
                 </div>
               </div>
+              <!-- Project 6 -->
               <div class="col-lg-4 mx-auto mb-5">
                 <div class="card h-100 shadow-lg border-0 bg-light">
                   <img
@@ -683,6 +698,34 @@
                                 </div>
 
                             </div>
+
+
+        <div class="container mt-5">
+
+  
+          <!-- Modal -->
+          <div class="modal fade" id="modalproject4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Chemical Ordering in High Entropy Materials</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <p>High-Throughput DFT calculation is done using the pyiron interface in combination with the TAMU HPRC capailities. 
+                            After we relax the newly generated crystallographic database we train an IAP which we use as calculator 
+                            for thousands of new structure relaxations.
+                          </p>
+                        
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
       </section>
         <!-- End Awards -->
 
@@ -734,12 +777,22 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 
     <!-- Custom JS -->
+    <script src="js/sketch.js"></script>
     <script src="js/scripts.js"></script>
-
     <script type="module" src="js/db.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
  </body>
 </html>
+
+
+
+
+
+
+<!-- Button trigger modal -->
+
