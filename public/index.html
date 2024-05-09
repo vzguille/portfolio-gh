@@ -391,6 +391,11 @@
                       <span class="material-icons-outlined me-1">article</span>
                       Article
                     </a>
+                    <!-- Button trigger modal -->
+                    <a class="btn btn-outline-primary btn-sm text-uppercase" 
+                    data-bs-toggle="modal" data-bs-target="#modalproject3">
+                        See more...
+                      </a>
                   </div>
                 </div>
               </div>
@@ -703,21 +708,57 @@
         <div class="container mt-5">
 
   
-          <!-- Modal -->
-          <div class="modal fade" id="modalproject4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
+          <!-- Modal 3-->
+          <div class="modal fade" id="modalproject3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
                   <div class="modal-content">
                       <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLabel">Chemical Ordering in High Entropy Materials</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                          <p>High-Throughput DFT calculation is done using the pyiron interface in combination with the TAMU HPRC capailities. 
-                            After we relax the newly generated crystallographic database we train an IAP which we use as calculator 
-                            for thousands of new structure relaxations.
-                          </p>
+
+                        <div class="row">
+                          <div class="col-md-4 ms-auto">
+                            <p>High-Throughput DFT calculation is done using the pyiron interface in 
+                              combination with the TAMU HPRC capailities. After we relax the newly 
+                              generated crystallographic database we train an IAP based on the M3GNet architecture.
+                              We use this model as a calculator for thousands of new structure relaxations. 
+                              A Cluster Expansion model is fitted against this large database, 
+                              then CE is used as a kernel for configuration mixing energies 
+                              calculation in a supercell to simulate the alloy ordering behavior at finite
+                              temperatures.
+    
+                            </p>
+
+                            
+                          </div>
+                          <div class="col-md-8 ms-auto">
+
+                            <img
+                              class="img-fluid"
+                              src="images/Project4-bcc_hull.png"
+                              alt="Project 4 Hull"
+                            >
+                          </div>
+
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="col-8">
+                            <img
+                              class="img-fluid"
+                              src="images/Project4-sro_bcc_full.png "
+                              alt="Project 4 SRO"
+                            >
+                          </div>
+                        </div>
+
                         
-                      </div>
+                      
+                    </div>
+
+                          
+                        
                       <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                           
@@ -725,6 +766,76 @@
                   </div>
               </div>
           </div>
+          <!-- Modal 4-->
+          <div class="modal fade" id="modalproject4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Chemical Ordering in High Entropy Materials</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <div class="row">
+                        <div class="col-md-4 ms-auto">
+                          <p>High-Throughput DFT calculation is done using the pyiron interface in 
+                            combination with the TAMU HPRC capailities. After we relax the newly 
+                            generated crystallographic database we train an IAP based on the M3GNet architecture.
+                            We use this model as a calculator for thousands of new structure relaxations. 
+                            
+  
+                          </p>
+
+                          
+                        </div>
+                        <div class="col-md-8 ms-auto">
+
+                          <img
+                            class="img-fluid"
+                            src="images/Project4-bcc_hull.png"
+                            alt="Project 4 Hull"
+                          >
+                        </div>
+
+                      </div>
+                      <hr />
+                      <div class="row justify-content-center">
+                        <div class="col-md-8">
+                          <img
+                            class="img-fluid"
+                            src="images/Project4-sro_bcc_full.png "
+                            alt="Project 4 SRO"
+                          >
+                        </div>
+                        <div class="col-md-4 ms-auto">
+                          <p>
+                            A Cluster Expansion model is fitted against this large database, 
+                            then CE is used as a kernel for configuration mixing energies 
+                            calculation in a supercell to study the complex alloy ordering 
+                            behavior at finite temperatures using a Monte Carlo simulation.
+
+                          </p>
+
+                          
+                        </div>
+                      </div>
+
+                      
+                    
+                  </div>
+
+                        
+                      
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
       </div>
       </section>
         <!-- End Awards -->
